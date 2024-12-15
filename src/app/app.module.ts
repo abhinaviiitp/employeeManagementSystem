@@ -26,6 +26,7 @@ import { ConfirmDeleteDialogComponent } from './components/confirm-delete-dialog
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatSnackBarModule,
     MatPaginatorModule,
     MatSortModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

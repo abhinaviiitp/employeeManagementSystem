@@ -1,36 +1,57 @@
 .header-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-bar {
+  width: 250px;
+}
+
+.add-button {
+  white-space: nowrap;
+}
+
+.table-container {
+  height: 68vh;
+  overflow: auto;
+  mat-paginator {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
   }
-  .actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .search-bar {
-    width: 250px;
-  }
-  .add-button {
-    white-space: nowrap;
-  }
+}
 
 .action-column {
-    width: 10%;
-    text-align: center;
+  width: 10%;
+  text-align: center;
+}
+
+.blue-action-icon {
+  color: blue;
+  padding-right: 3px;
 }
 
 .green-action-icon {
-    color: green;
-    padding-right: 3px;
+  color: green;
+  padding-right: 3px;
 }
 
 .red-action-icon {
-    color: red;
+  color: red;
 }
 
-.green-action-icon, .red-action-icon {
-    cursor: pointer;
-    font-size: 20px;
+.green-action-icon,
+.red-action-icon,
+.blue-action-icon {
+  cursor: pointer;
+  font-size: 20px;
 }

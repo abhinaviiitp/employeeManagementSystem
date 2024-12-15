@@ -14,7 +14,7 @@ import { UtilityService } from 'src/app/utility.service';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent {
-  displayedColumns: string[] = ['name', 'emailId', 'actions'];
+  displayedColumns: string[] = ['name', 'emailId', 'company', 'actions'];
   dataSource = new MatTableDataSource(this.employeeService.employees.getValue());
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
