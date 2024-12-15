@@ -1,0 +1,23 @@
+<div class="employee-details-card">
+    <mat-card class="employee-card">
+      <div class="card-header">
+        <img [src]="employee?.avatar" alt="Employee Avatar" class="avatar" />
+        <div class="employee-info">
+          <h2>{{ employee?.name }}</h2>
+          <p>{{ employee?.designation }}</p>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <div class="details">
+          <div><strong>Company Name:</strong> {{ employee?.companyName }}</div>
+          <div><strong>Email:</strong> {{ employee?.emailId }}</div>
+          <div><strong>Contact No.:</strong> {{ employee?.contactNo }}</div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+      </div>
+    </mat-card>
+  </div>

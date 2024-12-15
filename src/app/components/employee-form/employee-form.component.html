@@ -1,0 +1,43 @@
+<h2>{{ isEditMode ? 'Edit Employee' : 'Add New Employee' }}</h2>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Company Name</mat-label>
+        <input matInput formControlName="companyName" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="emailId" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Contact No.</mat-label>
+        <input matInput type="tel" formControlName="contactNo" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Designation</mat-label>
+        <mat-select formControlName="designation">
+          <mat-option *ngFor="let role of designations" [value]="role">{{ role }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-label>Avatar</mat-label>
+      <mat-radio-group formControlName="avatar">
+        <mat-radio-button *ngFor="let avatar of avatars" [value]="avatar">
+          <img [src]="avatar" alt="Avatar" width="50" height="50" />
+        </mat-radio-button>
+      </mat-radio-group>
+
+      <div class="actions">
+        <button mat-raised-button color="primary" type="submit" class="action-button" [disabled]="employeeForm.invalid">
+          {{ isEditMode ? 'Update' : 'Submit' }}
+        </button>
+        <button mat-raised-button color="warn" type="button" class="action-button" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
